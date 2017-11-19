@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Nexte-com</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="spinner_array">
+        <item>Payment Method</item>
+        <item>Visa</item>
+        <item>PayPal</item>
+        <item>Amazon Payment</item>
+    </string-array>
+</resources>

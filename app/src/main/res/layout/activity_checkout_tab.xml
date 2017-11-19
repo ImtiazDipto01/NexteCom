@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_checkout"
+        android:id="@+id/checkout_toolbar"/>
+
+    <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@android:id/tabhost"
+        android:layout_below="@+id/checkout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/MyCustomTabLayout">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                style="@style/MyCustomTabLayout"/>
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:background="#fafafa"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+    </TabHost>
+
+
+</RelativeLayout>
+

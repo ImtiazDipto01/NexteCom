@@ -1,0 +1,503 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    tools:context="nextdot.com.nextecom.ui.activities.ShipActivity">
+
+    <ScrollView
+        android:id="@+id/shp_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/shipping_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="40dp"
+                android:gravity="top|center_horizontal"
+                android:text="SHIPPING"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+
+            <LinearLayout
+                android:id="@+id/ll_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shipping_tag"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="80dp">
+
+
+                    <LinearLayout
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@color/grey_medium">
+
+                        <ImageButton
+                            android:id="@+id/btn_internation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:scaleType="fitXY"
+                            android:background="@drawable/checkbox_background_new"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="INTERNATIONAL"
+                        android:layout_marginTop="2dp"
+                        android:textSize="12sp"
+                        android:textColor="#2a2a2a"
+                        android:gravity="top|center"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingRight="80dp">
+
+
+                    <LinearLayout
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@color/grey_medium">
+
+                        <ImageButton
+                            android:id="@+id/btn_local"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dp"
+                            android:scaleType="fitXY"
+                            android:background="@drawable/white_background"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LOCAL"
+                        android:layout_marginTop="2dp"
+                        android:textSize="12sp"
+                        android:textColor="#2a2a2a"
+                        android:gravity="top|center"/>
+
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/payment_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_checkbox"
+                android:paddingTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="PAYMENT"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:id="@+id/local_payment"
+                android:orientation="vertical"
+                android:layout_below="@+id/payment_tag"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/fn_sn_line">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:background="@color/grey_medium"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="First Name"
+                            android:background="@color/grey_soft"
+                            android:textColor="#000000"
+                            android:paddingLeft="10dp"
+                            android:textSize="14sp"
+                            android:id="@+id/local_first_name"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/grey_medium">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Second Name"
+                            android:background="@color/grey_soft"
+                            android:textColor="#000000"
+                            android:paddingLeft="10dp"
+                            android:textSize="14sp"
+                            android:id="@+id/local_second_name"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:background="@color/grey_soft"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Local Address"
+                        android:background="@color/grey_soft"
+                        android:textColor="#000000"
+                        android:paddingLeft="10dp"
+                        android:textSize="14sp"
+                        android:id="@+id/local_address"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="2"
+                        android:background="@color/grey_soft"
+                        android:layout_marginLeft="10dp">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Credit Card Number"
+                            android:background="@color/grey_soft"
+                            android:textColor="#000000"
+                            android:paddingLeft="10dp"
+                            android:textSize="14sp"
+                            android:id="@+id/local_credit_card_number"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@color/grey_soft"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="CVC/CVV"
+                            android:background="@color/grey_soft"
+                            android:textColor="#000000"
+                            android:paddingLeft="10dp"
+                            android:textSize="14sp"
+                            android:id="@+id/local_CVC"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey_soft">
+
+                    <Spinner
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/local_spinner"></Spinner>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/international_payment"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_below="@+id/payment_tag"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:background="@color/grey_medium"
+                        android:layout_marginRight="5dp">
+
+                        <EditText
+                            android:id="@+id/first_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey_soft"
+                            android:hint="FIRST NAME"
+                            android:textColorHint="@color/grey_hard"
+                            android:textColor="#000000"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:background="@color/grey_medium"
+                        android:layout_marginLeft="5dp">
+
+
+                        <EditText
+                            android:id="@+id/last_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey_soft"
+                            android:textColorHint="@color/grey_hard"
+                            android:textColor="#000000"
+                            android:hint="LAST NAME"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="3"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="2"
+                        android:padding="2dp"
+                        android:background="@color/grey_medium"
+                        android:layout_marginRight="5dp">
+
+                        <EditText
+                            android:id="@+id/credit_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey_soft"
+                            android:textColorHint="@color/grey_hard"
+                            android:textColor="#000000"
+                            android:hint="CREDIT CARD NUMBER"
+                            android:inputType="number"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:background="@color/grey_medium"
+                        android:layout_marginLeft="5dp">
+
+
+                        <EditText
+                            android:id="@+id/cvc"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey_soft"
+                            android:textColorHint="@color/grey_hard"
+                            android:textColor="#000000"
+                            android:hint="CVC / CVV"
+                            android:inputType="number"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:background="@color/grey_medium"
+                        android:layout_marginRight="5dp">
+
+                        <Spinner
+                            android:id="@+id/spinner_expireMonth"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey_soft"
+                            android:hint="FIRST NAME"
+                            android:paddingLeft="10dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:background="@color/grey_medium"
+                        android:layout_marginLeft="5dp">
+
+
+                        <Spinner
+                            android:id="@+id/spinner_expireYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey_soft"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:padding="2dp"
+                        android:background="@color/grey_medium">
+
+                        <EditText
+                            android:id="@+id/promo_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey_soft"
+                            android:hint="PROMO CODE"
+                            android:inputType="number"
+                            android:textColorHint="@color/grey_hard"
+                            android:textColor="#000000"
+                            android:paddingLeft="10dp"
+                            android:textSize="12sp"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="CONFIRM"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:background="#545454"/>
+
+
+
+
+</RelativeLayout>

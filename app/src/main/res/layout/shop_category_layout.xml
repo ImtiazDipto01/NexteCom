@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shop_category"
+    android:layout_width="match_parent"
+    android:padding="2dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/add_image"
+        android:background="@drawable/category_image"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Shop by Categories"
+        android:id="@+id/add_title"
+        android:textColor="@color/black"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/add_image"
+        android:layout_toEndOf="@+id/add_image" />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Mobile, Electronic, Home and more.."
+        android:id="@+id/add_info"
+        android:textColor="@color/black"
+        android:layout_below="@+id/add_title"
+        android:layout_alignLeft="@+id/add_title"
+        android:layout_alignStart="@+id/add_title" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageView3"
+        android:background="@drawable/ic_image_navigate_next"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
